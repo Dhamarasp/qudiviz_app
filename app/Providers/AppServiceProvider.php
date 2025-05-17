@@ -19,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Load helpers
+        // Load helpers Toast
         require_once app_path('Helpers/ToastHelper.php');
     }
 }
