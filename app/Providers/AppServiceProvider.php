@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\URL;
 use Symfony\Component\HttpFoundation\Request;
 use Illuminate\Support\ServiceProvider;
 
@@ -24,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
 
         // Paksa semua URL menjadi https
         if (app()->environment('production')) {
-            URL::forceScheme('https');
+            \Illuminate\Support\Facades\URL::forceScheme('https');
         }
 
         // Percayai header X-Forwarded-Proto dari proxy Railway
